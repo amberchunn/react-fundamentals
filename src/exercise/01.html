@@ -10,14 +10,16 @@
     <script type="module">
         const container = document.createElement('div');
         container.textContent = 'Hello World';
-        container.setAttribute('class', 'container');
-        const rootElement = document.getElementById('root');
-        rootElement.appendChild(container);
+        container.className = 'container';
+
+        const rootElement = document.createElement('div');
+        rootElement.setAttribute('id', 'root');
+        rootElement.append(container);
+        document.body.append(rootElement);
     </script>
 </head>
-<body>
-    <div id="root"></div>
-</body>
+    <body>
+    </body>
 </html>
 <!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
